@@ -1,1 +1,28 @@
-﻿﻿﻿﻿﻿﻿﻿# LiveGO Docker ImageThis repository includes a demo of `Dockerfile` to build a docker image contains [LiveGO Media Server](https://github.com/gwuhaolin/livego) on Cent OS.  If you want to use the image directly,you can push a ready-made image([See it on Docker Hub](https://hub.docker.com/r/zhouweitong/livego-docker/)).Feel free to try it!  ### Pull command:  `docker pull zhouweitong/livego-docker`### Docker command sample:    ```docker run -d \		-p 1935:1935 \		-p 7001:7001 \		-p 7002:7002 \		-p 8090:8090 \		zhouweitong/livego-docker```  The command equals:  ```docker run -it \		-p 1935:1935 \		-p 7001:7001 \		-p 7002:7002 \		-p 8090:8090 \		zhouweitong/livego-docker \		/bin/bash -c /root/start.sh```  ### File settings:`/root/start.sh` is the sample starting shell script for livego.  `/root/stop.sh` is the sample stoping shell script for livego.  You can change them according to your own condition.  ### Volume setting:  `/root/livego` is the folder for LiveGO program file,and is mounted by default.  `/root/logs` is the folder for LiveGO log file,and is mounted by default.  
+# ETS Mediasrv Docker Image
+
+This repository includes a demo of `Dockerfile` to build a docker image contains [ETS Mediasrv Media Server](https://github.com/WilsonDhChen/mediasrv_linux) on Cent OS.  
+
+If you want to use the image directly,you can push a ready-made image([See it on Docker Hub](https://hub.docker.com/r/zhouweitong/mediasrv-docker/)).Feel free to try it!  
+
+Pull command:  
+~~~
+docker pull zhouweitong/mediasrv-docker
+~~~
+Docker run command:  
+  
+**Command must be run in the interactive mode(using parameter -it)**
+~~~
+docker run -it \
+		-p 1935:1935 \
+		-p 280:280 \
+		-p 281:281 \
+		-p 554:554 \
+		zhouweitong/mediasrv-docker \
+		bash
+~~~
+To run the LiveGO Media Server:
+~~~
+cd /root/mediasrv_linux/mediasrv && ./mediasrv_sh 
+~~~  
+
+**Notice:** `/root/mediasrv_linux/swap` is the swap folder for LiveGO configuration file,and is mounted by default.
