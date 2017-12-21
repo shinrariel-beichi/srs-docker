@@ -2,11 +2,11 @@
 
 This repository includes a demo of `Dockerfile` to build a docker image contains [ETS Mediasrv Media Server](https://github.com/WilsonDhChen/mediasrv_linux) on Cent OS.  
 
-If you want to use the image directly,you can push a ready-made image([See it on Docker Hub](https://hub.docker.com/r/zhouweitong/mediasrv-docker/)).Feel free to try it!  
+If you want to use the image directly,you can push a ready-made image([See it on Docker Hub](https://hub.docker.com/r/zhouweitong/srs-docker/builds)).Feel free to try it!  
 
 Pull command:  
 ~~~
-docker pull zhouweitong/mediasrv-docker
+docker pull zhouweitong/srs-docker:mediasrv
 ~~~
 Docker run command:  
   
