@@ -15,6 +15,8 @@ RUN yum install -y git go sudo bash psmisc net-tools bash-completion wget && \
 	mkdir /root/go/src/golang.org/x && \
 	cd /root/go/src/golang.org/x && \
 	git clone https://github.com/golang/net.git && \
+#	touch /etc/redhat-release && \
+#	sed -i '40c ret=$?; if [[ 0 -eq $ret ]]; then' /root/software/srs/trunk/auto/depends.sh && \
 	sed -i '505a         w->header()->set("Access-Control-Allow-Origin", "*");' \
 	/root/software/srs/trunk/src/app/srs_app_http_stream.cpp && \
 	sed -i '704a         w->header()->set("Access-Control-Allow-Origin", "*");' \
