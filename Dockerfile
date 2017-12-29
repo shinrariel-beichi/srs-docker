@@ -16,7 +16,7 @@ RUN yum install -y git go sudo bash psmisc net-tools bash-completion wget && \
 	cd /root/go/src/golang.org/x && \
 	git clone https://github.com/golang/net.git && \
 	touch /etc/redhat-release && \
-	sed -i '40c ret=$?; if [[ 0 -eq $ret ]]; then' /root/software/srs/trunk/auto/depends.sh && \
+#	sed -i '40c ret=$?; if [[ 0 -eq $ret ]]; then' /root/software/srs/trunk/auto/depends.sh && \
 #	sed -i '1129a int64_t dts2 = audio->timestamp * 90; ' /root/software/srs/trunk/src/app/srs_app_hls.cpp && \
 #	sed -i '1131c if ((ret = controller->write_audio(format->audio, dts2)) != ERROR_SUCCESS) { ' /root/software/srs/trunk/src/app/srs_app_hls.cpp && \
 #	sed -i '1132c  srs_error("hls cache write audio failed. ret=%d", ret); ' /root/software/srs/trunk/src/app/srs_app_hls.cpp && \
